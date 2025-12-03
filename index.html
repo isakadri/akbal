@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocialBoost | Buy Followers & Likes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="ak_logo.jpg">
+</head>
+<body>
+    <!-- Animated Background Elements -->
+    <div class="bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+
+    <div class="container">
+        <!-- Header with Logo -->
+        <header class="header">
+            <div class="logo-container">
+                <div class="logo-image">
+                    <img src="ak_logo.jpg" alt="SocialBoost Logo" class="brand-logo">
+                </div>
+                <div class="logo-text">
+                    <h1>A.K. Exporter<span class="logo-highlight">.in</span></h1>
+                    <p class="logo-tagline">Powered by AK Media</p>
+                </div>
+            </div>
+            <div class="tagline">
+                <i class="fas fa-bolt"></i>
+                Instant Social Media Growth
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-logo">
+                <img src="ak_logo.jpg" alt="SocialBoost Logo" class="hero-logo-img">
+            </div>
+            <h1 class="hero-title">
+                <span class="gradient-text">Boost Your Social Presence</span>
+            </h1>
+            <p class="hero-subtitle">High-quality followers & likes delivered instantly</p>
+            
+            <div class="pricing-badges">
+                <div class="badge">
+                    <i class="fas fa-users"></i>
+                    <div class="badge-content">
+                        <span class="badge-title">Followers</span>
+                        <span class="badge-price">₹220 / 1k</span>
+                    </div>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-heart"></i>
+                    <div class="badge-content">
+                        <span class="badge-title">Likes</span>
+                        <span class="badge-price">₹60 / 1k</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section">
+            <div class="section-header">
+                <div class="section-logo">
+                    <img src="ak_logo.jpg" alt="Logo" class="section-logo-img">
+                </div>
+                <h2 class="section-title">
+                    <i class="fas fa-cube"></i>
+                    Select Your Services
+                </h2>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Followers Card -->
+                <div class="service-card" id="followers-card">
+                    <div class="card-header">
+                        <div class="service-icon followers-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="service-title">Instagram Followers</h3>
+                        <div class="service-tag">Most Popular</div>
+                        <div class="card-logo">
+                            <img src="ak_logo.jpg" alt="AK Logo" class="mini-logo">
+                        </div>
+                    </div>
+                    
+                    <div class="card-body">
+                        <div class="price-display">
+                            <span class="currency">₹</span>
+                            <span class="price" id="followers-unit-price">220</span>
+                            <span class="per-unit">/ 1k</span>
+                        </div>
+                        
+                        <div class="quantity-control">
+                            <div class="qty-label">Quantity (in thousands)</div>
+                            <div class="qty-selector">
+                                <button class="qty-btn minus" onclick="adjustQty('followers', -1)">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <div class="qty-display">
+                                    <input type="number" id="followers-qty" value="1" min="1" max="100" onchange="calculateTotal()">
+                                    <span class="qty-unit">K</span>
+                                </div>
+                                <button class="qty-btn plus" onclick="adjustQty('followers', 1)">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <div class="qty-slider">
+                                <input type="range" id="followers-slider" min="1" max="50" value="1" oninput="updateFromSlider('followers', this.value)">
+                            </div>
+                        </div>
+                        
+                        <div class="service-total">
+                            <span>Item Total:</span>
+                            <span class="total-amount">₹<span id="followers-price">220</span></span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-footer">
+                        <img src="ak_logo.jpg" alt="AK Logo" class="footer-logo">
+                        <span>Real & Active Profiles | Instant Delivery | 24/7 Support</span>
+                    </div>
+                </div>
+                
+                <!-- Likes Card -->
+                <div class="service-card" id="likes-card">
+                    <div class="card-header">
+                        <div class="service-icon likes-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="service-title">Instagram Likes</h3>
+                        <div class="service-tag">Best Value</div>
+                        <div class="card-logo">
+                            <img src="ak_logo.jpg" alt="AK Logo" class="mini-logo">
+                        </div>
+                    </div>
+                    
+                    <div class="card-body">
+                        <div class="price-display">
+                            <span class="currency">₹</span>
+                            <span class="price" id="likes-unit-price">60</span>
+                            <span class="per-unit">/ 1k</span>
+                        </div>
+                        
+                        <div class="quantity-control">
+                            <div class="qty-label">Quantity (in thousands)</div>
+                            <div class="qty-selector">
+                                <button class="qty-btn minus" onclick="adjustQty('likes', -1)">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <div class="qty-display">
+                                    <input type="number" id="likes-qty" value="1" min="1" max="100" onchange="calculateTotal()">
+                                    <span class="qty-unit">K</span>
+                                </div>
+                                <button class="qty-btn plus" onclick="adjustQty('likes', 1)">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <div class="qty-slider">
+                                <input type="range" id="likes-slider" min="1" max="50" value="1" oninput="updateFromSlider('likes', this.value)">
+                            </div>
+                        </div>
+                        
+                        <div class="service-total">
+                            <span>Item Total:</span>
+                            <span class="total-amount">₹<span id="likes-price">60</span></span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-footer">
+                        <img src="ak_logo.jpg" alt="AK Logo" class="footer-logo">
+                        <span>High Retention | Natural Growth | Safe & Secure</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Order Summary -->
+        <section class="summary-section">
+            <div class="section-header">
+                <div class="section-logo">
+                    <img src="ak_logo.jpg" alt="Logo" class="section-logo-img">
+                </div>
+                <h2 class="section-title">
+                    <i class="fas fa-shopping-bag"></i>
+                    Order Summary
+                </h2>
+            </div>
+            
+            <div class="summary-card">
+                <div class="summary-header">
+                    <div class="summary-title">
+                        <div class="summary-logo">
+                            <img src="ak_logo.jpg" alt="Logo" class="summary-logo-img">
+                        </div>
+                        <h3>Your Order Details</h3>
+                    </div>
+                    <div class="summary-edit" onclick="resetOrder()">
+                        <i class="fas fa-redo"></i>
+                        Reset
+                    </div>
+                </div>
+                
+                <div class="summary-items">
+                    <div class="summary-item">
+                        <div class="item-name">
+                            <i class="fas fa-users"></i>
+                            <span>Followers</span>
+                        </div>
+                        <div class="item-details">
+                            <span id="summary-followers">1K</span>
+                            <span class="item-price">₹<span id="summary-followers-price">220</span></span>
+                        </div>
+                    </div>
+                    
+                    <div class="summary-item">
+                        <div class="item-name">
+                            <i class="fas fa-heart"></i>
+                            <span>Likes</span>
+                        </div>
+                        <div class="item-details">
+                            <span id="summary-likes">1K</span>
+                            <span class="item-price">₹<span id="summary-likes-price">60</span></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="summary-total">
+                    <div class="total-label">
+                        <div class="total-logo">
+                            <img src="ak_logo.jpg" alt="Logo" class="total-logo-img">
+                        </div>
+                        <span>Total Amount</span>
+                    </div>
+                    <div class="total-amount">
+                        ₹<span id="total-price">280</span>
+                    </div>
+                </div>
+                
+                <div class="summary-note">
+                    <img src="ak_logo.jpg" alt="AK Logo" class="note-logo">
+                    <span>Prices include all taxes. Delivery starts within 5-10 minutes after payment confirmation.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Information -->
+        <section class="customer-section">
+            <div class="section-header">
+                <div class="section-logo">
+                    <img src="ak_logo.jpg" alt="Logo" class="section-logo-img">
+                </div>
+                <h2 class="section-title">
+                    <i class="fas fa-user-circle"></i>
+                    Delivery Information
+                </h2>
+            </div>
+            
+            <div class="form-card">
+                <div class="form-header">
+                    <img src="ak_logo.jpg" alt="Logo" class="form-logo">
+                    <h3>Complete Your Order</h3>
+                </div>
+                
+                <div class="form-group">
+                    <label for="username">
+                        <i class="fas fa-at"></i>
+                        Instagram Username/URL
+                    </label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="username" placeholder="e.g., @yourusername or https://instagram.com/yourprofile">
+                    </div>
+                    <div class="form-note">Enter the exact username or profile link where you want followers/likes</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">
+                        <i class="fas fa-mobile-alt"></i>
+                        WhatsApp Number (Optional)
+                    </label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" id="phone" placeholder="91XXXXXXXXXX">
+                    </div>
+                    <div class="form-note">For order updates and support. Include country code.</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="notes">
+                        <i class="fas fa-sticky-note"></i>
+                        Special Instructions (Optional)
+                    </label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-edit"></i>
+                        <textarea id="notes" rows="2" placeholder="Any specific requirements or notes..."></textarea>
+                    </div>
+                </div>
+                
+                <button class="whatsapp-btn" onclick="sendToWhatsApp()">
+                    <div class="btn-content">
+                        <div class="btn-logo">
+                            <img src="ak_logo.jpg" alt="Logo" class="btn-logo-img">
+                        </div>
+                        <div class="btn-text">
+                            <span class="btn-title">Send Order via WhatsApp</span>
+                            <span class="btn-subtitle">Get instant confirmation & payment details</span>
+                        </div>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </button>
+                
+                <div class="security-note">
+                    <img src="ak_logo.jpg" alt="AK Logo" class="security-logo">
+                    <span>Your information is secure. We don't share your data with third parties.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="section-header">
+                <div class="section-logo">
+                    <img src="ak_logo.jpg" alt="Logo" class="section-logo-img">
+                </div>
+                <h2 class="section-title">
+                    <i class="fas fa-star"></i>
+                    Why Choose SocialBoost
+                </h2>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="feature-logo">
+                        <img src="ak_logo.jpg" alt="Logo" class="feature-logo-img">
+                    </div>
+                    <h4>Instant Delivery</h4>
+                    <p>Start receiving followers/likes within minutes after payment</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <div class="feature-logo">
+                        <img src="ak_logo.jpg" alt="Logo" class="feature-logo-img">
+                    </div>
+                    <h4>Real Profiles</h4>
+                    <p>High-quality, active accounts - no bots or fakes</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="feature-logo">
+                        <img src="ak_logo.jpg" alt="Logo" class="feature-logo-img">
+                    </div>
+                    <h4>Secure & Private</h4>
+                    <p>Your account safety is our top priority</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="feature-logo">
+                        <img src="ak_logo.jpg" alt="Logo" class="feature-logo-img">
+                    </div>
+                    <h4>24/7 Support</h4>
+                    <p>Dedicated customer support anytime you need</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo-container">
+                        <img src="ak_logo.jpg" alt="SocialBoost Logo" class="footer-brand-logo">
+                        <div class="footer-logo-text">
+                            <h3>A.K. Exporter<span class="logo-highlight">.in</span></h3>
+                            <p class="footer-tagline">Powered by AK Media</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#"><i class="fas fa-question-circle"></i> FAQ</a>
+                    <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+                    <a href="#"><i class="fas fa-shield-alt"></i> Privacy</a>
+                    <a href="#"><i class="fas fa-file-contract"></i> Terms</a>
+                </div>
+                
+                <div class="footer-contact">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 9876543210</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp Available</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-logo">
+                    <img src="ak_logo.jpg" alt="AK Logo" class="bottom-logo">
+                </div>
+                <p>© 2023 A.K. Exporter.in | All rights reserved by AK Media</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Confirmation Toast -->
+    <div class="toast" id="confirmation-toast">
+        <div class="toast-content">
+            <div class="toast-logo">
+                <img src="ak_logo.jpg" alt="Logo" class="toast-logo-img">
+            </div>
+            <span>Order updated successfully!</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
