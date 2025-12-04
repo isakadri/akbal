@@ -65,7 +65,7 @@ function addLogoEffects() {
                 behavior: 'smooth'
             });
             
-            showToast('Welcome to SocialBoost!', 'success');
+            showToast('Welcome to A.K.Exporter.in!', 'success');
         });
     });
 }
@@ -535,3 +535,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
